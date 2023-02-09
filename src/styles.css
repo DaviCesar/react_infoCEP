@@ -1,0 +1,117 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#181926, #1e2030);
+}
+
+.title {
+    font-size: 85px;
+    color: #cad3f5;
+    animation: flipTitle 1s;
+}
+
+.title h1 {
+    box-shadow: 5px 3px 8px black;
+}
+
+@keyframes flipTitle {
+    from {
+        transform: rotateX(90deg);
+        transform: rotateY(90deg);
+    }
+
+    to {
+        transform: rotateX(0deg);
+        transform: rotateY(0deg);
+    }
+}
+
+.containerInput {
+    background-color: #363a4f;
+    padding: 15px;
+    margin: 34px 0;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.containerInput input {
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    color: #cad3f5;
+    outline: none;
+    margin-right: 8px;
+}
+
+.containerInput input::placeholder {
+    color: #cad3f5;
+}
+
+.buttonSearch {
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.buttonSearch:hover {
+    transform: scale(1.2);
+}
+
+.main {
+    box-shadow: 1px 3px 8px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #cad3f5;
+    width: 500px;
+    border-radius: 8px;
+    transition: transform 1.0s;
+    animation: flipMain 1s;
+    color: #181926;
+}
+
+@keyframes flipMain {
+    from {
+        transform: rotateX(90deg);
+    }
+
+    to {
+        transform: rotateX(0deg);
+    }
+}
+
+
+.main h2 {
+    margin: 16px 0;
+    font-size: 39px;
+}
+
+.main span {
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+@media (max-width: 620px) {
+    .title {
+        font-size: 60px
+    }
+
+    .main h2 {
+        font-size: 28px;
+    }
+
+    .main {
+        width: 80%;
+        min-height: 250px;
+    }
+
+}
